@@ -1,0 +1,70 @@
+html {
+  /*
+  1. Put the background image of your choice here. You can find default one
+  under ../images. Save and open index.html to check if you are happy with how
+  it looks. Then switch to index.html to put the tray on it.
+  */
+  background-image: url(../images/christmas.jpg)
+}
+
+#tray {
+  /*
+  3. Now we need to put the backround again, you can find it under
+  ../images/tray.png.
+  */
+  background-image: url(../images/tray.png) ;
+  /*
+  4. Give the tray width of 1000px and height of 791px
+  */
+  width: 1000px;
+  height: 791px;
+  /*
+  5. Set the margin to 0 auto, so that the tray is centered
+  */
+  margin: 0 auto;
+  /*
+  6. Check that the tray looks great now and let's get some ginger men on it!
+  Go to index.hmtl
+  */
+}
+
+#inside_tray{
+  /*
+  9.
+    display: flex;
+    width:900px;
+    height:691px;
+    margin:70px;
+    margin-top:0px;
+    padding-top:50px;
+    flex-wrap: wrap;
+  */
+  display: flex;
+  width:900px;
+  height:691px;
+  margin:70px;
+  margin-top:0px;
+  padding-top:50px;
+  flex-wrap: wrap;
+}
+
+#inside_tray .ginger_man {
+    /*
+    14.
+    background-image: url("../images/ginger/ginger.png") ;
+    width: 150px;
+    height: 240px;
+    background-repeat: no-repeat;
+    display:block;
+    position:relative;
+    margin:10px;
+  */
+  background-image: url("../images/ginger/ginger.png") ;
+  width: 150px;
+  height: 240px;
+  background-repeat: no-repeat;
+  display:block;
+  position:relative;
+  margin:10px;
+
+}

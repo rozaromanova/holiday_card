@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Gingermen Tray</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="javascript/ginger_man.js" type="application/javascript"></script>
+
+  </head>
+  <body>
+<!--
+    2. Now we need to create a space where we can put the tray. Please set an
+    id on it so that we can apply individual style on it later. Then go back to
+    css and lets make it fancy!
+-->
+    <div id="tray">
+
+      <!--
+          7. Time to define the space that the ginger men will take -
+          we don't want to place them on the tray side.
+      -->
+      <div id="inside_tray"></div>
+      <!--
+          8. The space is there, but the size and style is not there yet >>
+          style.css
+      -->
+    </div>
+    <!--
+    12. So, we have a factory, we can ask the factory to give us a ginger man and
+    now let's ask the factory to give us 10 ginger men
+
+    - create an array gingerMen
+    - add 10 genger men to the array
+    -->
+    <script>
+    var gingerMen = [];
+          for(var i = 0 ; i<10; i++) {
+              gingerMen[i] = new GingerMan();
+              $("#inside_tray").append(gingerMen[i].getGingerMan());
+          }
+    </script>
+  </body>
+</html>
