@@ -38,6 +38,8 @@ html {
     margin-top:0px;
     padding-top:50px;
     flex-wrap: wrap;
+
+    Go to javascript/ginger_man.js
   */
   display: flex;
   width:900px;
@@ -58,6 +60,7 @@ html {
     display:block;
     position:relative;
     margin:10px;
+    Move to ginger_man.js to create a chocolate version!
   */
   background-image: url("../images/ginger/ginger.png") ;
   width: 150px;
@@ -67,4 +70,34 @@ html {
   position:relative;
   margin:10px;
 
+}
+
+#inside_tray .ginger_man.chocolate {
+    /*
+    17. Set the backround image that can be found under ../images/ginger/ginger-chocolate.png
+    Afterwards let's go back to the js file and continue decorating the ginger
+    men.
+    */
+    background-image: url("../images/ginger/ginger-chocolate.png") ;
+
+}
+
+#inside_tray .ginger_man .block {
+  /*
+  22. Let's setthe following:  width - 150px, height 240px, absolute position,
+  top 0px and display as a block. When done, get back to js file to add some
+  neck accessory!
+  */
+  width: 150px;
+  height: 240px;
+  position:absolute;
+  top:0px;
+  display:block;
+}
+
+#inside_tray .ginger_man .candy{
+  /*
+  34. Add candy background image
+  */
+  background-image: url("../images/ginger/candy.png") ;
 }

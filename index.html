@@ -34,10 +34,66 @@
     -->
     <script>
     var gingerMen = [];
-          for(var i = 0 ; i<10; i++) {
+    for(var i = 0 ; i<10; i++) {
               gingerMen[i] = new GingerMan();
               $("#inside_tray").append(gingerMen[i].getGingerMan());
+              /*
+              25. Let's give every ginger men the green scarf
+              */
+              gingerMen[i].setNeck(gingerMen[i].neck.SCARF);
+              /*
+              30. Put the green buttons here
+              */
+              gingerMen[i].setButton(gingerMen[i].buttons.GREEN);
+              
           }
+
+    /*
+    13. The ginger man slots are allocated, but we are missing the picures for
+    them! Come over to style.css to change that!
+    */
+    /*
+    16. Let's replace every second 'plain' ginger man with the chocolate one. Use
+    cycle to do that. Then move to css to add the background pic.
+    */
+
+    for(var i = 0 ; i<10; i=i+2) {
+            gingerMen[i].setChocolate(true);
+            /*
+            20. Let's set the Santa hat on every 2 ginger men
+            */
+            gingerMen[i].setHat(gingerMen[i].hats.SANTA);
+            /*
+            31. Put the red buttons here and go back to js to finish up -
+            add candy!
+            */
+            gingerMen[i].setButton(gingerMen[i].buttons.RED);
+        }
+    /*
+    21. And now let's place the ST hat on the ginger man number 7. And before we
+    are going to check how it looks, go to css and add the size for the hat div
+    */
+    gingerMen[7].setHat(gingerMen[7].hats.ST);
+
+    /*
+    26. Now, let's pick every 3rd ginger men and put a papillon on him, instead of the
+    scarf. And return to js to continue decorating!
+    */
+    for(var i = 0 ; i<10; i=i+3) {
+            gingerMen[i].setNeck(gingerMen[i].neck.PAPILLON);
+            /*
+            29. Put the blue buttons here
+            */
+            gingerMen[i].setButton(gingerMen[i].buttons.BLUE);
+            /*
+            33. Add candy here and in css!
+            */
+            gingerMen[i].setCandy(true);
+
+        }
+
+
     </script>
+
   </body>
 </html>
