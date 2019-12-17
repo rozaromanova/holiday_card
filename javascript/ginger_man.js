@@ -13,14 +13,16 @@ class GingerMan {
     */
     this.hats = {
         SANTA: "santa_hat.png",
-        ST: "st_hat.png"
+        ST: "st_hat.png",
+        NONE: 0
     };
     /*
     23. Now the time for neck accessory. Add the variations just like we did above
     */
     this.neck = {
         PAPILLON: "neck_papillon.png",
-        SCARF: "neck_scarf.png"
+        SCARF: "neck_scarf.png",
+        NONE: 0
     };
     /*
     27. Time for the buttons - you know what to do(see above!)
@@ -28,7 +30,8 @@ class GingerMan {
     this.buttons = {
         RED: "btn_red.png",
         GREEN: "btn_green.png",
-        BLUE: "btn_blue.png"
+        BLUE: "btn_blue.png",
+        NONE: 0
     };
 
   };
@@ -58,6 +61,10 @@ class GingerMan {
   */
   setHat(hat) {
     var hatElement = $("<div class='block hat'></div>");
+    this.gingerElement.children(".hat").remove();
+    if (hat == 0) {
+        return;
+    }
     hatElement.css("background-image", 'url("images/ginger/' + hat + '")');
     this.gingerElement.append(hatElement);
   };
@@ -67,6 +74,10 @@ class GingerMan {
   */
   setNeck(neck) {
     var neckElement = $("<div class='block neck'></div>");
+    this.gingerElement.children(".neck").remove();
+    if (neck == 0) {
+        return;
+    }
     neckElement.css("background-image", 'url("images/ginger/' + neck + '")');
     this.gingerElement.append(neckElement);
   };
@@ -76,6 +87,10 @@ class GingerMan {
   */
   setButton(button) {
     var buttonsElement = $("<div class='block buttons'></div>");
+    this.gingerElement.children(".buttons").remove();
+    if (button == 0) {
+        return;
+    }
     buttonsElement.css("background-image", 'url("images/ginger/' + button + '")');
     this.gingerElement.append(buttonsElement);
   };
@@ -86,6 +101,10 @@ class GingerMan {
 
   setCandy(hasCandy) {
     var candyElement = $("<div class='block candy'></div>");
-    this.gingerElement.append(candyElement);
+    if (hasCandy) {
+        this.gingerElement.append(candyElement);
+    } else {
+        this.gingerElement.children(".candy").remove();
+    }
   }
 }
