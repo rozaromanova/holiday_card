@@ -4,7 +4,8 @@ elements  with for us. The elements would need to have class so that we can
 style them later.
 */
 
-var GingerMan = function () {
+class GingerMan {
+  constructor() {
     this.gingerElement = $("<div class='ginger_man'></div>");
     /*
     18. We want now to give the ginger men the hat. For that, let's introduce the
@@ -40,7 +41,7 @@ var GingerMan = function () {
   the ginger man. (Go to index.html afterwards)
   */
 
-  GingerMan.prototype.getGingerMan = function () {
+  getGingerMan() {
       return this.gingerElement;
   };
 
@@ -50,17 +51,15 @@ var GingerMan = function () {
   some chocolate ginger men on the tray
   */
 
-  GingerMan.prototype.setChocolate = function (hasChocolate) {
-      if (hasChocolate) {
-          this.gingerElement.addClass("chocolate");
-      }
+  setChocolate() {
+      this.gingerElement.addClass("chocolate");
   };
 
   /*
   19. Once we have the types of the hat, let's create a wall to tell which hat
   we want on the ginger men. Go to index.html to place the hats
   */
-  GingerMan.prototype.setHat = function (hat) {
+  setHat(hat) {
     var hatElement = $("<div class='block hat'></div>");
     this.gingerElement.children(".hat").remove();
     if (hat == 0) {
@@ -73,7 +72,7 @@ var GingerMan = function () {
   24. And just as we did with the hats, we want to have a way to tell which neck
   accessory do we want(and then add it in index.html)
   */
-  GingerMan.prototype.setNeck = function (neck) {
+  setNeck(neck) {
     var neckElement = $("<div class='block neck'></div>");
     this.gingerElement.children(".neck").remove();
     if (neck == 0) {
@@ -86,7 +85,7 @@ var GingerMan = function () {
   /*
   28. Define the way to tell which buttons do you want (and then add it in index.html)
   */
-  GingerMan.prototype.setButton = function (button) {
+  setButton(button) {
     var buttonsElement = $("<div class='block buttons'></div>");
     this.gingerElement.children(".buttons").remove();
     if (button == 0) {
@@ -100,11 +99,12 @@ var GingerMan = function () {
   32. Define the way to add the candy (and then add it in index.html)
   */
 
-  GingerMan.prototype.setCandy = function (hasCandy) {
+  setCandy(hasCandy) {
     var candyElement = $("<div class='block candy'></div>");
     if (hasCandy) {
         this.gingerElement.append(candyElement);
     } else {
         this.gingerElement.children(".candy").remove();
     }
-};
+  }
+}
